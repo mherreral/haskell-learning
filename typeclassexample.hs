@@ -20,14 +20,14 @@ instance WhatAliveThingsDo Human where
   reproduction (NickName nick) = "" ++ nick ++ ": sexual reproduction"
   nutrition (NickName nick) = nick ++ ": heterotrophic"
   breathing (NickName nick) = nick ++ ": pulmonary breathing"
-  somethingParticular (NickName nick) = nick ++ " I'm an instances"
+  somethingParticular (NickName nick) = nick ++ ": I destroy the planet"
 
 --esta otra intancia es para el tipo planta
 instance WhatAliveThingsDo Plant where
   reproduction (Name name) = name ++ ": asexual and sexual reproduction"
   nutrition (Name name) = name ++ ": utotrophic"
   breathing (Name name) = name ++ ": photosynthesis"
-  somethingParticular (Name name) = name ++ " I'm an instance"
+  somethingParticular (Name name) = name ++ " I un-destroy the planet"
 
 --definimos la función con la restricción de tipos que son instancias de la typeclass
 saygreat :: WhatAliveThingsDo thing => thing -> IO ()
